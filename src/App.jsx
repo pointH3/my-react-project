@@ -16,8 +16,7 @@ const App = () => {
   return(
     <>
     <Menu/>
-    <h3>{logged ? 'hi!' : ''}</h3>
-    <p>{logged ? 'Welcome!' : 'Quien sos vos???'}</p>
+    <h3>{logged ? 'Welcome!' : 'U are not logged'}</h3>
     <button onClick={login}>{logged ? 'Logout' : 'Loggin'}</button>
     </>
   )
