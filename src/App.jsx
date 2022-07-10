@@ -1,14 +1,22 @@
+import axios from "axios";
 import { useState } from "react";
 const App = () => {
-//   const [logged, setLogged] = useState(localStorage.getItem('token'));
-  const name = 'Joaquin';
-  const sumar = ()=>{
-    return 1+1
+  
+  //  --HOOKS--
+  //  const [valor, setValor] = useState(0);
+
+  // const url = 'https://www.breakingbadapi.com/api/';
+
+  const [logged, setlogged] = useState(false)
+  const login = ()=>{
+    setlogged(!logged);
   };
+  
   return(
     <>
-    <h1>Hola!</h1>
-    {sumar()}
+    <h3>{logged ? 'hi!' : ''}</h3>
+    <p>{logged ? 'Welcome!' : '???'}</p>
+    <button onClick={login}>Login / Logout</button>
     </>
   )
   }
