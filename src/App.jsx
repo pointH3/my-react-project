@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import LoginButton from "./components/LoginButton";
 import Menu from './components/menu'
 const App = () => {
   
@@ -8,16 +9,16 @@ const App = () => {
 
   // const url = 'https://www.breakingbadapi.com/api/';
 
-  const [logged, setlogged] = useState(false)
-  const login = ()=>{
-    setlogged(!logged)
-  };
+  const [logged, setLogged] = useState(false)
+  // const login = ()=>{
+  //   setLogged(!logged)
+  // };
   
   return(
     <>
-    <Menu e={logged}/>
+    <Menu logged={logged} />
     <p>{logged ? 'Welcome!' : 'U are not logged'}</p>
-    <button onClick={login}>{logged ? 'Logout' : 'Login'}</button>
+    <LoginButton logged={logged} setLogged={setLogged}/>
     </>
   )
   }

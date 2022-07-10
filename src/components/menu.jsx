@@ -2,11 +2,11 @@ import React from 'react'
 
 
 
-const Menu = (e) => {
-  console.log(e);
+const Menu = ({logged}) => {
+  console.log(logged)
   return (
     <>
-    <h3>This is the menu component</h3>
+    <h3>Welcome {logged ? "Joaquin!" : "Usuario No Registrado!"}</h3>
     </>
   )
 }
