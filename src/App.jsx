@@ -10,14 +10,14 @@ const App = () => {
 
   const [logged, setlogged] = useState(false)
   const login = ()=>{
-    setlogged(!logged);
+    setlogged(!logged)
   };
   
   return(
     <>
-    <Menu/>
-    <h3>{logged ? 'Welcome!' : 'U are not logged'}</h3>
-    <button onClick={login}>{logged ? 'Logout' : 'Loggin'}</button>
+    <Menu e={logged}/>
+    <p>{logged ? 'Welcome!' : 'U are not logged'}</p>
+    <button onClick={login}>{logged ? 'Logout' : 'Login'}</button>
     </>
   )
   }

@@ -1,6 +1,9 @@
 import React from 'react'
 
-const Menu = () => {
+
+
+const Menu = (e) => {
+  console.log(e);
   return (
     <>
     <h3>This is the menu component</h3>
