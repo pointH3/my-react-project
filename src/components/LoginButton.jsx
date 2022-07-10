@@ -1,9 +1,12 @@
 import React from 'react'
 
 const LoginButton = ({logged, setLogged}) => {
+    const run = ()=>{
+        setLogged(!logged)
+    };
   return (
     <>
-        <button onClick={setLogged}>{logged ? "Logout" : "Login"}</button>
+        <button onClick={run}>{logged ? "Logout" : "Login"}</button>
     </>
   )
 }
