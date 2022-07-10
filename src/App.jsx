@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import Menu from './components/menu'
 const App = () => {
   
   //  --HOOKS--
@@ -14,9 +15,10 @@ const App = () => {
   
   return(
     <>
+    <Menu/>
     <h3>{logged ? 'hi!' : ''}</h3>
-    <p>{logged ? 'Welcome!' : '???'}</p>
-    <button onClick={login}>Login / Logout</button>
+    <p>{logged ? 'Welcome!' : 'Quien sos vos???'}</p>
+    <button onClick={login}>{logged ? 'Logout' : 'Loggin'}</button>
     </>
   )
   }
